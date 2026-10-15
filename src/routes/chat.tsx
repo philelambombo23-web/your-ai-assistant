@@ -61,7 +61,7 @@ function ChatPage() {
   };
 
   const editMsg = (i: number) => {
-    setInput(messages[i].content);
+    setInput(messages[i]?.content ?? "");
     setMessages(messages.slice(0, i));
     taRef.current?.focus();
   };

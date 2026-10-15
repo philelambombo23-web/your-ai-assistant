@@ -22,7 +22,7 @@ Use markdown headings and bullet points.`;
 type Msg = { role: "system" | "user" | "assistant"; content: string };
 
 async function callModel(messages: Msg[]): Promise<string> {
-  const key = process.env.LOVABLE_API_KEY;
+  const key = process.env["LOVABLE_API_KEY"];
   if (!key) throw new Error("AI is not configured: LOVABLE_API_KEY is missing.");
   const res = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
     method: "POST",
@@ -72,7 +72,7 @@ async function callModel(messages: Msg[]): Promise<string> {
 }
 
 export const checkAiStatus = createServerFn({ method: "GET" }).handler(async () => {
-  return { configured: !!process.env.LOVABLE_API_KEY, model: MODEL };
+  return { configured: !!process.env["LOVABLE_API_KEY"], model: MODEL };
 });
 
 export const generateEmail = createServerFn({ method: "POST" })
