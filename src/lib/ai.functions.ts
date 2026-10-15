@@ -13,6 +13,8 @@ Rules:
 - Match the requested tone and length exactly.
 - Preserve the user's facts and intended meaning.
 - Never invent names, dates, figures, promises, or business details. Where essential information is missing, use clear square-bracket placeholders such as [Your name] or [Date].
+- Where a company name is needed (e.g. in the sign-off) and the user has not given one, use "Coffee Concepts by Philela".
+- Use South African English spelling.
 - Output plain text only, no markdown, no commentary before or after the email.`;
 
 const RESEARCH_SYSTEM = `You are a careful workplace research assistant.
