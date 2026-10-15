@@ -142,3 +142,38 @@
     color: var(--color-foreground);
   }
 }
+
+/* Brand theme: navy #14213D, blue #2563EB, grey #F5F7FB, slate #64748B, teal #14B8A6 */
+:root {
+  --radius: 0.625rem;
+  --background: oklch(0.975 0.006 264);
+  --foreground: oklch(0.26 0.06 265);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.26 0.06 265);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.26 0.06 265);
+  --primary: oklch(0.546 0.215 262.9);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.955 0.012 264);
+  --secondary-foreground: oklch(0.26 0.06 265);
+  --muted: oklch(0.955 0.012 264);
+  --muted-foreground: oklch(0.554 0.041 257.4);
+  --accent: oklch(0.95 0.03 180);
+  --accent-foreground: oklch(0.45 0.09 182);
+  --teal: oklch(0.704 0.123 182.5);
+  --border: oklch(0.915 0.013 264);
+  --input: oklch(0.9 0.015 264);
+  --ring: oklch(0.546 0.215 262.9);
+  --sidebar: oklch(0.26 0.06 265);
+  --sidebar-foreground: oklch(0.86 0.02 264);
+  --sidebar-primary: oklch(0.546 0.215 262.9);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.32 0.06 265);
+  --sidebar-accent-foreground: oklch(1 0 0);
+  --sidebar-border: oklch(0.33 0.05 265);
+}
+@theme inline {
+  --color-teal: var(--teal);
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+}
+body { font-family: var(--font-sans); background: var(--background); color: var(--foreground); }
